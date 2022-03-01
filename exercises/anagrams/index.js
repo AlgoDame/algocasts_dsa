@@ -33,26 +33,22 @@ function anagrams(stringA, stringB) {
     let keysA = Object.keys(objA);
     let keysB = Object.keys(objB);
 
-    keysA
+    let equalLength = keysA.length == keysB.length;
+
+    if(!equalLength) return false;
+
     let result = true;
 
     for (let key of keysA) {
-        key
         if (objA[key] !== objB[key]) {
             result = false
         }
     }
 
-    result
     return result;
 
 
 }
-
-let ans = anagrams('RAIL! SAFETY!', 'fairy tales')
-ans
-
-
 
 
 
